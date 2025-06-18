@@ -1,1 +1,14 @@
 # crime_india_power_bi
+# Author - Prayag Das
+email - prayag.pds@gmail.com  
+website - https://prayagpds.wixsite.com/my-site-1
+# DATA DESCRIPTION-
+Source- https://www.kaggle.com/datasets/sudhanvahg/indian-crimes-dataset  
+Time Frame - 2020-2024,
+Size - 40000+
+# ETL-
+Addressed formatting issues in the 'Date of occurrence' column by using Power BI’s Transform tab and applying the appropriate Locale to correct the language and region settings. I extracted the date from the “Date Reported” field and added a separate “Time Reported” column for clarity. Since there was already a “Time of occurrence” column, I ensured only the date was extracted in “Date of Occurrence”. In the “Victim Gender” column, I standardized values by converting 'M' to 'Male', 'F' to 'Female', and retaining 'X' as is. Additionally, resolved anomalies in the crime domain, such as reclassifying Homicide from other crimes to violent crimes by creating a calculated column using DAX. 
+# EDA-
+During the analysis, initial visualization challenges arose due to gaps in the date range, which were resolved by creating a “Date Lookup” table using DAX and establishing a relationship with the original Crime table to ensure continuous date representation. Subsequently, several DAX measures were developed, including calculations for total crimes committed, last month’s crimes, month-on-month crime percentage change, unsolved crimes, unsolved crime percentage, and all crimes, enabling comprehensive and dynamic reporting of crime trends and resolution rates.
+# CONCLUSION-
+After a comprehensive analysis and visualization of the crime dataset, it was observed that a total of 40,160 crimes were committed, with nearly 50.04% of cases remaining unsolved. Arson emerged as the most frequently reported offence, while females were identified as the most affected gender, accounting for 55.83% of victims, followed by males at 33.38% and other gender identities at 10.79%. The ages 22 and 26 were equally the most impacted. Although arson had the highest individual numbers, violent crimes collectively surpassed fire-related incidents, with traffic fatalities being the lowest among major categories. Crime rates fluctuated throughout the years, peaking between February and August, with the highest monthly counts in February, April, and June (3,720 each), and the lowest in October and December (2,880 each). The most significant month-on-month increase occurred in January (25%), while August saw the largest decrease (-19.65%). Delhi reported the highest total crimes (5,400), followed by Mumbai (4,415) and Bangalore (3,588). Most cities exhibited an unsolved crime rate close to 50%, with Delhi slightly higher at 51%, and other major cities like Bangalore and Chennai just above 50%. In all top cities, solved crimes remained fewer than half of the total, highlighting a persistent challenge in crime resolution.
